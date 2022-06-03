@@ -20,6 +20,7 @@ You can use d to find how many hours there are in total with:
 ```
 cat hours.txt | d f float | d r sum
 ```
+Gives 23.
 
 So what happened here?
 
