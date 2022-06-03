@@ -41,6 +41,16 @@ In general, you can
 * reduce things using the sum, product or join operators (more may come)
 * split things based on a single character or word (no regexes supported yet)
 
+## python mapping
+
+using `d m p` (d map python) you can tell d to run a line of python
+for every line in the input. Your line will be ran in a context where:
+* There is an `i` or `inp` variable available which contains the current line
+* There is an `o` or `out` variable which when written to becomes the result of the expression (using `__repr__` to convert it to a string)
+* Alternatively, you can print the result of your expression. If you do, the values in `o`/`out` are ignored, to prevent multiple outputs from the expression.
+
+No state is kept between mapping lines.
+
 # TODO list
 * more built-in regexes
 * finding commonly used units (for example, disk sizes in the format `500KiB`) and automatically convert to their base units (`500Kib` --> `512000`)
